@@ -1,0 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2.2em;
+
+    .logo {
+        color: white;
+        font-size: 1.3rem;
+        span {
+            color: #6246EA;
+        }
+    }
+
+    .logo:hover {
+        color: #6246EA;
+        font-size: 1.3rem;
+        span {
+            color: white;
+        }
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+main, header {
+    background: #1F1B1B;
+}
+
+main {
+    padding: 2em 2.2em;
+    color: white;
+    text-align: center;
+    height: 100%;
+
+    .coding-img {
+        width: clamp(400px, 100%, 1000px);
+        margin: 4em auto;
+        display: block;
+    }
+
+    .subheader {
+        letter-spacing: .8em;
+        text-transform: uppercase;
+    }
+    
+    .left-col {
+        h1 {
+            font-size: 2.4rem;
+            width: 100%;
+            
+            span {
+                color: #6246EA;
+            }
+        }
+    
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 5em;
+        }
+        
+        a.view-button {
+            // margin-top: 5em;
+            background: #6246EA;
+            // display: inline-block;
+            // width: 200px;
+            padding: 1rem 3rem;
+            border-radius: 2.5rem;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            img {
+                width: 1.4rem;
+                margin-right: .8em;
+            }
+
+            &:hover {
+                color: #6246EA;
+                background: white;
+                img {
+                    width: 1.4rem;
+                    margin-right: .8em;
+                    filter: opacity(0.5) drop-shadow(0 0 0 #6246EA);
+                }
+            }
+        }
+    }
+
+    .arrow-down {
+        margin-top: 2em;
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+
+.section-timeline {
+    text-align: center;
+    // background: rgba(violet,0,0, 1.0);
+    background: rgba(194, 175, 175, 0.65);
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font-size: 1rem;
+
+.section-title {
+        font-size: 1.9rem;
+        color: #1F1B1B;
+        position: relative;
+    
+    span {
+        content: "";
+        position: absolute;
+        width: 130px;
+        border-bottom: 3px yellow solid;
+        // background: yellow;
+        margin: 0 auto;
+        left: 2em;
+        right: 0;
+        top: 1.3em;
+    }
+}
+
+img {
+    cursor: pointer;
+}
+
+.techcellar-logo{ 
+    width: 55%;
+    height: auto;
+}
+
+.telos-logo {
+    width: 40%;
+    height: auto;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #6246EA;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+}
+
+section {
+    padding: 0 1.4em;
+}
+
+.section-title {
+    letter-spacing: .4em;
+    font-size: 1.9rem;
+}
+
+section.section-project {
+    text-align: center;
+    color: white;
+    padding: 2em 2em;
+    background: url('../images/endless-constellation.svg');
+    .section-title {
+        position: relative;
+
+        span {
+            content: "";
+            position: absolute;
+            margin: 0 auto;
+            width: 130px;
+            border-bottom: 3px yellow solid;
+            left: 2em;
+            right: 0;
+            top: 1.3em;
+            height: 2px;
+        }
+    }
+
+    .section-header {
+        // font-size: 1.9rem;
+        margin-bottom: 3em;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .description {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .project {
+    margin-bottom: 4em;
+        img {
+            width: 100%;
+            border-radius: 2em;
+            border: 1px solid #6246EA;
+        }
+
+        img:hover {
+            width: 100%;
+            border-radius: 2em;
+            border: 2px solid #6246EA;
+            cursor: pointer;
+        }
+    }
+
+}
+
+section.expertise {
+    padding: 2em 2em;
+    text-align: center;
+    background: white;
+    font-size: 1.1rem;
+
+   li {
+       margin-bottom: 2.5em;
+   }
+}
+
+section.skills {
+    background: #1F1B1B;
+    color: white;
+    text-align: center;
+    padding: 2em 1em;
+    .section-title {
+        position: relative;
+        span {
+            content: "";
+            position: absolute;
+            margin: 0 auto;
+            width: 130px;
+            border-bottom: 4px yellow solid;
+            left: 2em;
+            right: 0;
+            top: 2em;
+            height: 2px;
+        }
+    }
+
+
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        max-width: 500px;
+        margin-left: 2em;
+        li {
+            background: #C4C4C4;
+            width: 6em;
+            height: 6em;
+            border-radius: 5em;
+            margin-bottom: 2em;
+            img {
+                margin-top: 1.8em;
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+
+    section.skills {
+        ul {
+            margin: 0 auto;
+            max-width: 700px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+  }
+
+
+  @media only screen and (min-width: 768px) {
+    body {
+      font-size: 20px;
+    }
+
+    .container {
+        padding: 0 4em;
+    }
+    
+    .menu-cta {
+        display: none;
+    }
+
+    header {
+        nav {
+            display: block;
+        }
+
+        .prime-nav {
+            display: flex;
+
+            li a {
+                color: white;
+                margin-right: 2em;
+                font-size: 1em;
+
+             &:hover {
+                border-bottom: 2px white solid;
+             }
+            }
+
+            .twitter:hover {
+                filter: opacity(0.5) drop-shadow(0 0 0 #0e76a8);
+             }
+
+             .linkedin:hover {
+                filter: opacity(0.5) drop-shadow(0 0 0 #1DA1F2);
+             }
+        }
+    }
+  }
+
+  @media only screen and (min-width: 992px) {
+      body {
+          font-size: 22px;
+      }
+
+      header {
+          padding: 0 6em;
+      }
+
+      .container {
+        padding: 0 8em;
+    }
+
+      main{
+        padding-top: 5em;
+          .left-col {
+              margin-top: 4em;
+              max-width: 500px;
+          }
+        
+          .content {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-areas: "description image";
+              text-align: left;
+
+              .subheader {
+                  font-size: .7em;
+                  text-align: center;
+                  margin-left: 7%;
+              }
+          }
+
+          .coding-img {
+              height: 300px;
+              grid-area: image;
+              max-width: 1000px;
+          }
+  
+      }
+
+      section.section-project {
+          font-size: 1em;
+
+          .project {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20%;
+            grid-template-areas: "description image";
+            justify-content: center;
+            text-align: left;
+          }
+          
+          img {
+              max-width: 600px;
+              grid-area: image;
+          }
+      }
+
+      section.expertise {
+          margin-top: 2em;
+
+          ul {
+              display: flex;
+
+              li {
+                  margin-right: 3em;
+
+                  &:last-child {
+                      margin-right: 0;
+                  }
+              }
+          }
+      }
+  }
+
+  @media only screen and (min-width: 1200px) {
+      body {
+          font-size: 24px;
+      }
+
+    .container {
+            padding: 0 10em;
+    }
+
+    header {
+        padding: 0 12em;
+    }
+    
+  }
