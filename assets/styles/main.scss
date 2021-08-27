@@ -398,6 +398,51 @@ section.skills {
     }
 }
 
+.menu-btn {
+    display: block;
+}
+
+nav {
+    position: fixed;
+    width: 50%;
+    z-index: 999;
+    background-color: salmon;
+    padding: 1em;
+    top: 0;
+    right: 0;
+    height: 100vh;
+
+    .close-menu-btn {
+        float: right;
+        display: block;
+        cursor: pointer;
+        filter: invert(93%) sepia(100%) saturate(0%) hue-rotate(248deg) brightness(106%) contrast(106%);
+    }
+    ul {
+        text-align: center;
+        margin: 4em auto;
+
+        li {
+            
+            a {
+                font-size: 2rem;
+                color: white;
+                display: block;
+                padding: 0.3em;
+                font-weight: normal;
+
+                &:hover {
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
 @media only screen and (min-width: 600px) {
     body {
       font-size: 18px;
@@ -423,21 +468,34 @@ section.skills {
         padding: 0 4em;
     }
     
-    .menu-cta {
+    .menu-btn   {
         display: none;
     }
 
     header {
         nav {
+            display: flex;
+            justify-content: space-around;
+            background: none;
+            position: unset;
+            height: auto;
             display: block;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            right: 0;
+            left: 0;
+            .close-menu-btn {
+                display: none;
+            }
         }
 
         .prime-nav {
             display: flex;
-
+            float: right;
             li a {
                 color: white;
-                margin-right: 2em;
+                margin-left: 2em;
                 font-size: 1em;
 
              &:hover {
